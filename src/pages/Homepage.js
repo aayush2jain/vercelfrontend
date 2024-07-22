@@ -16,7 +16,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://vercelbackend-rust.vercel.app/user/getuser');
+        const response = await axios.get('/user/getuser');
         console.log('response', response.data);
         setUserData(response.data.data.email);
         setUserName(response.data.data.username);
@@ -56,7 +56,7 @@ const Homepage = () => {
     const getAllVideos = async () => {
       try {
         const response = await axios.get('/video/all');
-        console.log('data', response.data.videos);
+        console.log('data', response);
         setVideos(response.data.videos);
         console.log(videos)
       } catch (error) {
