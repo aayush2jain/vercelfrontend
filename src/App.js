@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
-import logo from './logo.svg';
+
 import './App.css';
 import Homepage from './pages/Homepage';
 import UploadVideo from './pages/UploadVideo';
