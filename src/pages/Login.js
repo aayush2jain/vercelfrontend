@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
+   
     const [password, setPassword] = useState('');
     const [message, setmessage] = useState("");
     const submit = async (e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('email', email);
-        formData.append('username', username);
+     
         formData.append('password', password);
 
        
         try {
-            const response=await axios.post("/user/", formData, {
+            const response=await axios.post("https://vercelbackend-rust.vercel.app/user/", formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -28,7 +28,7 @@ const Login = () => {
                 navigate('/')
              }
              else
-             { navigate('/home');}
+             { navigate('/home')}
            
         } catch (error) {
             console.log(error);
