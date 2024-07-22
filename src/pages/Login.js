@@ -22,6 +22,7 @@ const Login = () => {
                     'Content-Type': 'application/json'
                 }
             });
+            console.log('responselogin',response)
              if(response.status===299){
                 setmessage(response.data.message)
                 console.log(message)
