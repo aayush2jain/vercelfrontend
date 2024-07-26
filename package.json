@@ -54,5 +54,5 @@
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
   },
-  "proxy": "https://vercelbackend-rust.vercel.app"
+  "proxy": "https://vercelbackend-rust.vercel.app/"
 }
